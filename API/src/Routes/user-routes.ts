@@ -1,6 +1,6 @@
-import express from "express";
+import { Router } from "express";
 
-const userRoute = express.Router();
+const userRoute = Router();
 
 userRoute.get("/", (req, res) => {
   res.status(200).send("Here are all the users in the db");
