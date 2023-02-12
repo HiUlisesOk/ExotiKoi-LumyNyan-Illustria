@@ -8,6 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+# dotenv environment variables file
+.env
+.env.test
 dist
 dist-ssr
 *.local
