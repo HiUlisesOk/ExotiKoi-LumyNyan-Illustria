@@ -20,18 +20,14 @@
 
 import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
-import express from "express";
 
-const app = express();
-app.use(express.json()); // middelware que transforma la req.body a un json
+import server from "./src/server";
+import { sequelize } from "./src/db";
 
 const PORT = process.env.PORT;
 
-app.get("/ping", (_req, res) => {
-  console.log("Hello! It's time to PING PONG!");
-  res.status(200).send("PONG!");
-});
-
-app.listen(PORT, () => {
-  console.log("Server has started on port: " + PORT);
+sequelize.sync({ force: true }).then(() => {
+  server.listen(PORT, () => {
+    console.log("%s listening at", process.env.PORT); // eslint-disable-line no-console
+  });
 });

@@ -11,7 +11,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
 
 //Now we create and config our db
 
-const sequelize = new Sequelize(
+export const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
   {
     logging: false, // set to console.log to see the raw SQL queries
@@ -49,7 +49,4 @@ const { Recipe, Diet } = sequelize.models;
 // Product.hasMany(Reviews);
 Recipe.belongsToMany(Diet, { through: "RecipesDiet" });
 Diet.belongsToMany(Recipe, { through: "RecipesDiet" });
-module.exports = {
-  ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
-  conn: sequelize, // para importarte la conexión { conn } = require('./db.js');
-};
+export default { ...sequelize.models };

@@ -1,7 +1,7 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-import routes from "./routes/index";
+import router from "./routes/index";
 
 const server = express();
 // server.name = "API";
@@ -30,7 +30,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/", routes);
+server.use("/", router);
 
 // Error catching endware.
 server.use((err: any, req: any, res: any, next: any) => {
