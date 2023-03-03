@@ -1,5 +1,5 @@
-# EnchantedHearts
-In Development - ⚔️Enchanted Hearts💖 
+# EnchantedHearts - ExotiKoi-LumyNyan-Illustria
+In Development - ⚔️Enchanted Hearts - ExotiKoi- LumyNyan- Illustria💖 
 
 
 "Enchanted Hearts" is a unique and immersive role-playing web app and experience that combines elements of fantasy, literature, games, manga, music, and anime to create a one-of-a-kind journey through enchanted lands. This website is designed to captivate and engage young people of all genders and ages between 13 and 40 who are passionate about fantastical worlds and adventure.
